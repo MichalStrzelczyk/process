@@ -1,6 +1,6 @@
 {
-    "name": "miinto/auth_service-sdk",
-    "description": "Miinto - Auth Service | SDK",
+    "name": "arrow/process-builder",
+    "description": "Process builder",
     "license": "proprietary",
     "autoload": {
         "psr-4": {
