@@ -4,14 +4,14 @@ declare(strict_types=1);
 
 namespace Process;
 
-class ResponseFactory
+class ResponseFactory implements ResponseFactoryInterface
 {
     /**
      * Create a new object of process response
      *
-     * @return \Process\Response
+     * @return \Process\ResponseInterface
      */
-    public function createResponse(): \Process\Response
+    public function createResponse(): \Process\ResponseInterface
     {
         return new \Process\Response();
     }
