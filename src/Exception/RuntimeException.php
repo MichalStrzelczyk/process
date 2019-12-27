@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Process\Exception;
 
-class ValidationError extends \DomainException
+class RuntimeException extends \RuntimeException
 {
     /**
      * Error container
