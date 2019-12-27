@@ -39,12 +39,11 @@ abstract class AbstractProcess
     final public function handle(array $options = []): ResponseInterface
     {
         $errors = $this->validator->validate($options);
+        $this->getResponse()->setErrors($errors);
 
-        if (\count($errors) > 0) {
-            throw new \Process\Exception\ValidationError($errors);
+        if ($this->getResponse()->getStatus()) {
+            $this->execute($options);
         }
-
-        $this->execute($options);
 
         return $this->getResponse();
     }
